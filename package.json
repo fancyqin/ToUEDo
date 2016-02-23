@@ -1,0 +1,30 @@
+{
+  "name": "touedo",
+  "version": "0.0.1",
+  "description": "todolist UED",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.14.2",
+    "connect-mongo": "^1.1.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "moment": "^2.11.1",
+    "mongoose": "^4.3.5",
+    "morgan": "^1.6.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "UED"
+  ],
+  "author": "QF",
+  "license": "MIT"
+}

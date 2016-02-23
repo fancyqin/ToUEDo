@@ -1,0 +1,21 @@
+extends layout
+block content
+    table(border='1')
+        thead
+            tr
+                th title
+                th completed
+                th time create
+                th time update
+                th User id
+                th weekData
+        tbody
+            each item in datas
+                tr()
+                    td #{item.title}
+                    td #{item.completed}
+                    td #{moment(item.createAt).format('YYYY-MM-DD / HH:mm:ss')}
+                    td #{moment(item.updateAt).format('YYYY-MM-DD / HH:mm:ss')}
+                    td #{item.userId}
+                    td #{item.weekData}
+

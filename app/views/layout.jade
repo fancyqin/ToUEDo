@@ -1,0 +1,29 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        meta(name='viewport',content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width')
+        title ToUEDo
+        link(href="/css/style.css" rel="styleSheet")
+        link(href="libs/pikaday/css/pikaday.css" rel="styleSheet")
+    body
+        .wrap
+            header#header
+                h1
+                    a(href='/')
+                        b.to To
+                        b.ue UE
+                        b.d D
+                        b.o o
+                if uzer
+                    input#userId(value="#{uzer[0]._id}" type="hidden")
+                    .user-info Welcome,#{uzer[0].name}&nbsp;&nbsp;
+                        a(href="/logout") Logout
+            block content
+            footer#footer
+
+
+    script(src="/libs/jquery/dist/jquery.min.js")
+    script(src="libs/moment/min/moment.min.js")
+    script(src="/libs/pikaday/pikaday.js")
+    script(src="/js/todo.js")

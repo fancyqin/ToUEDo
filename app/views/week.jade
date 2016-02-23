@@ -1,0 +1,33 @@
+extends layout
+block content
+    .content#content
+        .tabs.cf
+            a(href='/') 日计划
+            a.on(href='/week') 周计划
+        .control-bar
+            .date-ctrl.cf
+                .date-box
+                    input.durating-date(type="text" readonly="readonly")
+                .date-trigger.J-trigger(data-type='week' data-week='yes')
+                    button#prevDate <
+                    button#nextDate >
+        .bar
+            .press-in
+                input.press#press(type="text" ,placeholder="弄啥嘞 THIS WEEK？" ,data-week= "yes")
+                button.sumbit sumbit
+        .main
+            - var stuts
+            if isIndex
+                ul.list.list-now
+                    each item in todayTasks
+                        - stuts = true
+                        include item
+            ul.list.list-completed
+                each item in todayDoneTasks
+                    - stuts = false
+                    include item
+            include loading.html
+
+
+
+

@@ -1,0 +1,17 @@
+
+if stuts
+    li(class='item-id-#{item._id}')
+        div.box(data-id="#{item._id}")
+            label.check.J-check
+                input(type='checkbox')
+            p.J-inner #{item.title}
+            i.J-del
+            span.J-edit
+else
+    li(class='item-id-#{item._id} completed')
+        div.box(data-id="#{item._id}")
+            label.check.J-check
+                input(type='checkbox' checked)
+            p.J-inner #{item.title}
+            i.J-del
+            span.J-edit

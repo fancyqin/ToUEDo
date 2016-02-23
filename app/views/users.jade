@@ -1,0 +1,12 @@
+extends layout
+block content
+    table(border='1')
+        thead
+            tr
+                th name
+                th id
+        tbody
+            each item in users
+                tr
+                    td #{item.name}
+                    td #{item._id}

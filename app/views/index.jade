@@ -1,0 +1,38 @@
+extends layout
+block content
+	.content#content
+		.tabs.cf
+			a.on(href='/') 日计划
+			a(href='/week') 周计划
+		.control-bar
+			.date-ctr.cf
+				.date-box
+					input.sign-date#datepicker(type="text" readonly="readonly")
+					input.durating-date(type="text" readonly="readonly" style="display:none")
+				.date-trigger.J-trigger(data-type='day')
+					button#prevDate <
+					button#nextDate >
+				.date-mode
+					a.mode-item.on#modeToday(href='/') 今天
+					a.mode-item.on#modeDay(href='/') 日
+					span.mode-item#modeWeek 周
+					span.mode-item#modeMonth 月
+		.bar
+			.press-in
+				input.press#press(type="text" ,placeholder="弄啥嘞 TODAY？")
+				button.sumbit sumbit
+		.main
+			- var stuts
+			if isIndex
+				ul.list.list-now
+					each item in todayTasks
+						- stuts = true
+						include item
+			ul.list.list-completed
+				each item in todayDoneTasks
+					- stuts = false
+					include item
+			include loading.html
+
+
+

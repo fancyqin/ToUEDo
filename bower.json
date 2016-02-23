@@ -1,0 +1,30 @@
+{
+  "name": "touedo",
+  "description": "todolist UED",
+  "main": "app.js",
+  "authors": [
+    "QF"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "todo",
+    "list",
+    "UED"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "statics/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "pikaday": "~1.4.0",
+    "moment": "~2.11.1"
+  }
+}

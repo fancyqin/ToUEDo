@@ -1,0 +1,19 @@
+extends layout
+block content
+    #signinModal.modal
+        h2 登录（非域账号哦）
+            a(href='/signup') 没有账号？注册
+        form(method='POST',action='/user/signin')
+            .form-group
+                input#signinName.form-input(name="user[name]" , type='text' placeholder='username')
+            .form-group
+                input#signinPassword.form-input(name="user[password]" , type='password' placeholder='password')
+            .btn-wrap
+                button.btn(type="sumbit") 登 录
+    if needTip
+        if tipWrong
+            .tip-wrap
+                .tip.wrong-tip #{tips}
+        else
+            .tip-wrap
+                .tip.right-tip #{tips}
